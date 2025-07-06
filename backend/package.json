@@ -3,6 +3,24 @@
     "cors": "^2.8.5",
     "dotenv": "^17.0.1",
     "express": "^5.1.0",
-    "mongoose": "^8.16.1"
-  }
+    "express-validator": "^7.2.1",
+    "mongoose": "^8.16.1",
+    "nodemon": "^3.1.10"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "devDependencies": {
+    "jest": "^30.0.4"
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
 }
