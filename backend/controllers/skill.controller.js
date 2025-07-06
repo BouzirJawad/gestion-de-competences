@@ -90,7 +90,7 @@ const updateSubSkill = async (req, res) => {
   }
 };
 
-const deleteSkill = async () => {
+const deleteSkill = async (req, res) => {
     try {
         const skill = await Skill.findById({ _id: req.params.id })
 

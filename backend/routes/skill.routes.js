@@ -6,8 +6,8 @@ router.post("/create", skillController.createSkill)
 router.get("/", skillController.getSkills)
 router.get("/:id", skillController.getSkill)
 router.put("/delete", skillController.updateSkill)
-router.patch("/:skillId/subskills/:subSkillTitle", skillController.updateSubSkill)
-router.delete("/delete", skillController.deleteSkill)
+router.patch("/subskill/:skillId/:subSkillTitle", skillController.updateSubSkill)
+router.delete("/delete/:id", skillController.deleteSkill)
 
 router.get("/test", (req, res) => {
     res.send("test working")
