@@ -5,7 +5,7 @@ const skillController = require("../controllers/skill.controller")
 router.post("/create", skillController.createSkill)
 router.get("/", skillController.getSkills)
 router.get("/:id", skillController.getSkill)
-router.put("/delete", skillController.updateSkill)
+router.put("/update", skillController.updateSkill)
 router.patch("/subskill/:skillId/:subSkillTitle", skillController.updateSubSkill)
 router.delete("/delete/:id", skillController.deleteSkill)
 

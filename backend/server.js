@@ -5,7 +5,7 @@ require('dotenv').config()
 const skillRoutes = require("./routes/skill.routes")
 
 const app = express()
-const PORT = process.env.PORT || 7460
+const PORT = process.env.PORT || 7461
 
 app.use(cors())
 app.use(express.json())

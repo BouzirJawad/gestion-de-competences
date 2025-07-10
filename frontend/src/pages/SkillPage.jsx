@@ -70,7 +70,7 @@ const SkillsPage = () => {
         ) : skills.length === 0 ? (
           <p className="text-center text-gray-500">No skills to display.</p>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
             {skills.map((skill) => (
               <div key={skill._id} className="bg-white p-4 rounded shadow">
                   <h2 className="text-xl font-semibold text-blue-1">
