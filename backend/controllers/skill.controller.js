@@ -52,6 +52,20 @@ const getSkill = async (req, res) => {
     }
 }
 
+const getSkillByCode = async (req, res) => {
+    try {
+        const skill = await Skill.findOne({ code: req.params.code })
+
+        if (!skill) {
+            return res.status(404).json({ message: "Skill not found"})
+        }
+
+        res.status(201).json(skill)
+    } catch (error) {
+        res.status(500).json({ error: error.message})
+    }
+}
+
 const updateSkill = async (req, res) => {
     try {
         const updatedSkill = await Skill.findByIdAndUpdate(req.params.id, { $set: req.body}, { new: true, runValidators: true })
@@ -105,4 +119,4 @@ const deleteSkill = async (req, res) => {
     }
 }
 
-module.exports = { createSkill, getSkills, getSkill, updateSkill, updateSubSkill, deleteSkill }
+module.exports = { createSkill, getSkills, getSkill, getSkillByCode, updateSkill, updateSubSkill, deleteSkill }
